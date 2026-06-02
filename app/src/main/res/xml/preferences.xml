@@ -1,0 +1,37 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory app:title="Peripherals">
+        <SwitchPreferenceCompat
+            app:key="pref_enable_mouse"
+            app:title="Enable Mouse"
+            app:defaultValue="true"/>
+        <SwitchPreferenceCompat
+            app:key="pref_enable_keyboard"
+            app:title="Enable Keyboard"
+            app:defaultValue="true"/>
+        <SwitchPreferenceCompat
+            app:key="pref_enable_joystick"
+            app:title="Enable Joystick"
+            app:summary="App restart required when changing peripherals"
+            app:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory app:title="Keep Alive (Ping)">
+        <SwitchPreferenceCompat
+            app:key="pref_enable_ping"
+            app:title="Enable Ping"
+            app:summary="Prevents Bluetooth HID from sleeping by sending periodic empty reports"
+            app:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory app:title="Advanced">
+        <SwitchPreferenceCompat
+            app:key="pref_root_latency"
+            app:title="Zero Latency Mode (Root)"
+            app:summary="Requires Magisk/Root. Disables Bluetooth power saving for lowest possible delay."
+            app:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory app:title="Diagnostics">
+        <Preference
+            app:key="pref_list_devices"
+            app:title="List Connected Devices"
+            app:summary="Show all input devices connected to this phone" />
+    </PreferenceCategory>
+</PreferenceScreen>
